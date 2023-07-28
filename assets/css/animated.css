@@ -3217,3 +3217,18 @@ Copyright (c) 2014 Daniel Eden
 
  
 }
+
+
+.vertical-menu {
+  width: 600px;
+  height: 350px;
+  overflow-y: auto;
+}
+
+.vertical-menu .add {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}

@@ -1263,12 +1263,12 @@ The Clients
   width: 100%;
 }
 
-.the-clients .nacc .thumb .client-content img {
+.client-content img {
   width: 76px;
   height: 62px;
 }
 
-.the-clients .nacc .thumb .client-content {
+.client-content {
   padding: 60px 30px;
   background-image: url(../images/client-bg.png);
   background-size: cover;
@@ -1276,14 +1276,16 @@ The Clients
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
+  margin-bottom: 15%;
 }
 
-.the-clients .nacc .thumb .client-content p {
+.client-content p {
   color: #fff;
   font-weight: 500;
   font-size: 16px;
   font-style: italic;
   margin-top: 30px;
+  
 }
 
 .the-clients .nacc .thumb .down-content {
