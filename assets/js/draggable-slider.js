@@ -1,24 +1,17 @@
-// Instantiate the Bootstrap carousel
-$(".multi-item-carousel").carousel({
-  interval: false,
-});
+$("#theCarousel").on("slide.bs.carousel", function (e) {
+  let $e = $(e.relatedTarget);
+  let idx = $e.index();
+  let itemsPerSlide = 3;
+  let totalItems = $(".carousel-item").length;
 
-// for every slide in carousel, copy the next slide's item in the slide.
-// Do the same for the next, next item.
-$(".multi-item-carousel .item").each(function () {
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(":first");
-  }
-  next.children(":first-child").clone().appendTo($(this));
-
-  if (next.next().length > 0) {
-    next.next().children(":first-child").clone().appendTo($(this));
-  } else {
-    $(this)
-      .siblings(":first")
-      .children(":first-child")
-      .clone()
-      .appendTo($(this));
+  if (idx >= totalItems - (itemsPerSlide - 1)) {
+    let it = itemsPerSlide - (totalItems - idx);
+    for (let i = 0; i < it; i++) {
+      if (e.direction === "left") {
+        $(".carousel-item").eq(i).appendTo(".carousel-inner");
+      } else {
+        $(".carousel-item").eq(0).appendTo(".carousel-inner");
+      }
+    }
   }
 });

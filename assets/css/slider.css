@@ -1,0 +1,54 @@
+.multi-item-carousel .carousel-inner>.carousel-item {
+    float: none;
+}
+
+.multi-item-carousel .carousel-inner>.carousel-item.active.left {
+    transform: translateX(-33%);
+}
+
+.multi-item-carousel .carousel-inner>.carousel-item.active.right {
+    transform: translateX(33%);
+}
+
+.multi-item-carousel .carousel-inner>.carousel-item.next,
+.multi-item-carousel .carousel-inner>.carousel-item.prev {
+    transform: translateX(0);
+}
+
+.multi-item-carousel .carousel-inner>.carousel-item.next.left,
+.multi-item-carousel .carousel-inner>.carousel-item.prev.right {
+    transform: translateX(33%);
+}
+
+.multi-item-carousel .carousel-inner>.carousel-item.next.right,
+.multi-item-carousel .carousel-inner>.carousel-item.prev.left {
+    transform: translateX(-33%);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    h4 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Default position for larger screens */
+
+/* Adjust position for smaller screens */
+@media (max-width: 768px) {
+    .carousel-control {
+        top: 30%;
+        transform: translateY(-40%);
+    }
+}
+
+.carousel-control {
+    top: 5px;
+    /* Positioned 10px from the top, adjust as needed */
+    transform: none;
+}
