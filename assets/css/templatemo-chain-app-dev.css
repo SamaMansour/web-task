@@ -1274,9 +1274,8 @@ The Clients
   background-size: cover;
   border-radius: 50px;
   width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
   margin-bottom: 15%;
+  margin-top:10%;
 }
 
 .client-content p {
